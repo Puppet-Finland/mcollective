@@ -2,8 +2,6 @@
 #
 # This class sets up mcollective
 #
-# Currently functionality is limited to installing or removing the package.
-#
 # == Parameters
 #
 # [*manage*]
