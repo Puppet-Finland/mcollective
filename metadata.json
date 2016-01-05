@@ -1,0 +1,12 @@
+{
+  "name": "puppetfinland-mcollective",
+  "version": "0.1.0",
+  "author": "Puppet-Finland team",
+  "license": "BSD license",
+  "summary": "Setup mcollective",
+  "source": "https://github.com/Puppet-Finland/puppet-mcollective.git",
+  "project_page": "https://github.com/Puppet-Finland/puppet-mcollective",
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.0.0" }
+  ]
+}
