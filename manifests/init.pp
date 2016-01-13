@@ -37,7 +37,7 @@ class mcollective
     $service_ensure = undef,
     $service_enable = 'enabled'
 
-) inherits mcollective::params
+)
 {
 
 validate_bool($manage)
