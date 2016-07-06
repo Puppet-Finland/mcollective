@@ -5,8 +5,8 @@
 #
 class mcollective::service
 (
-    $ensure,
-    $enable
+    Variant[Boolean, Enum['running', 'stopped']] $ensure,
+    Boolean                                      $enable
 
 ) inherits mcollective::params
 {

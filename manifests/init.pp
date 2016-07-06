@@ -18,9 +18,7 @@
 #   and 'stopped' / 'false'. This parameter can be left undefined to not manage 
 #   the service status at all.
 # [*service_enable*]
-#   Enable the mcollective service. Valid values are the same as for the Puppet 
-#   Service resource, that is, 'enabled' (default), 'disabled', 'manual' and 
-#   'mask'.
+#   Enable the mcollective service. Valid values are true (default) and false.
 #
 # == Authors
 #
@@ -32,16 +30,13 @@
 #
 class mcollective
 (
-    $manage = true,
-    $package_ensure = 'absent',
-    $service_ensure = undef,
-    $service_enable = 'enabled'
+    Boolean $manage = true,
+            $package_ensure = 'absent',
+            $service_ensure = undef,
+            $service_enable = true
 
 )
 {
-
-validate_bool($manage)
-validate_re("${package_ensure}", '^(present|absent)$')
 
 if $manage {
     class { '::mcollective::install':

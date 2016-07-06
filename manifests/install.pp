@@ -4,7 +4,7 @@
 #
 class mcollective::install
 (
-    $ensure
+    Enum['present', 'absent', 'latest'] $ensure
 
 ) inherits mcollective::params
 {
