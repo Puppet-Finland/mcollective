@@ -39,6 +39,9 @@ class mcollective
 {
 
 if $manage {
+
+    include ::puppetlabs
+
     class { '::mcollective::install':
         ensure => $package_ensure,
     }
