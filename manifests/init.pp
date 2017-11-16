@@ -7,12 +7,6 @@
 # [*manage*]
 #   Whether to manage mcollective using Puppet. Valid values are true (default) 
 #   and false.
-# [*package_ensure*]
-#   Status of the mcollective package. If you're using Puppetlabs package 
-#   repositories then mcollective gets pulled in in the 'puppet-agent' package, 
-#   in which case the default value of 'absent' is the correct choice. If you 
-#   want or need to use operating system's Puppet / MCollective packages, then 
-#   set this parameter to 'present'.
 # [*service_ensure*]
 #   The status of the mcollective service. Valid values are 'running' / 'true' 
 #   and 'stopped' / 'false'. This parameter can be left undefined to not manage 
@@ -24,6 +18,8 @@
 #
 # Samuli Seppänen <samuli.seppanen@gmail.com>
 #
+# Samuli Seppänen <samuli@openvpn.net>
+#
 # == License
 #
 # BSD-license. See file LICENSE for details.
@@ -31,7 +27,6 @@
 class mcollective
 (
     Boolean $manage = true,
-            $package_ensure = 'absent',
             $service_ensure = undef,
             $service_enable = true
 
@@ -41,10 +36,6 @@ class mcollective
 if $manage {
 
     include ::puppetlabs
-
-    class { '::mcollective::install':
-        ensure => $package_ensure,
-    }
 
     class { '::mcollective::service':
         ensure => $service_ensure,
