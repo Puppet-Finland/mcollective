@@ -1,6 +1,6 @@
 {
   "name": "puppetfinland-mcollective",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "author": "Puppet-Finland team",
   "summary": "Setup mcollective",
   "license": "BSD-2-Clause",
