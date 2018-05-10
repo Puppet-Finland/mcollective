@@ -2,13 +2,60 @@
   "name": "puppetfinland-mcollective",
   "version": "0.4.0",
   "author": "Puppet-Finland team",
-  "license": "BSD-2-Clause",
   "summary": "Setup mcollective",
+  "license": "BSD-2-Clause",
   "source": "https://github.com/Puppet-Finland/puppet-mcollective.git",
   "project_page": "https://github.com/Puppet-Finland/puppet-mcollective",
   "dependencies": [
-    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.0.0" },
-    { "name": "puppetlabs/inifile", "version_requirement": ">= 1.4.2" },
-    { "name": "puppetfinland/puppetlabs", "version_requirement": ">= 0.1.0" }
-  ]
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.0.0"
+    },
+    {
+      "name": "puppetlabs/inifile",
+      "version_requirement": ">= 1.4.2"
+    },
+    {
+      "name": "puppetfinland/puppetlabs",
+      "version_requirement": ">= 0.1.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "pdk-version": "1.4.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.4.1-0-g52adbbb"
 }
