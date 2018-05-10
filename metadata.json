@@ -2,7 +2,7 @@
   "name": "puppetfinland-mcollective",
   "version": "0.4.0",
   "author": "Puppet-Finland team",
-  "license": "BSD license",
+  "license": "BSD-2-Clause",
   "summary": "Setup mcollective",
   "source": "https://github.com/Puppet-Finland/puppet-mcollective.git",
   "project_page": "https://github.com/Puppet-Finland/puppet-mcollective",
