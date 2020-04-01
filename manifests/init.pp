@@ -35,8 +35,6 @@ class mcollective
 
 if $manage {
 
-    include ::puppetlabs
-
     class { '::mcollective::service':
         ensure => $service_ensure,
         enable => $service_enable,

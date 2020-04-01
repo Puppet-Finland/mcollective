@@ -14,10 +14,6 @@
     {
       "name": "puppetlabs/inifile",
       "version_requirement": ">= 1.4.2"
-    },
-    {
-      "name": "puppetfinland/puppetlabs",
-      "version_requirement": ">= 0.1.0"
     }
   ],
   "operatingsystem_support": [
